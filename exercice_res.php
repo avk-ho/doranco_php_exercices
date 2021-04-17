@@ -2,11 +2,27 @@
     // 1- Ecrire une fonction php qui lit une variable et retourne 
     // true si celle-ci est égale ou supérieure à 100, et 
     // false s'il ne s'agit pas d'un nombre ou si elle est inférieure à 100
-
+    function issup100($var){
+        if(is_numeric($var)){
+            if($var >= 100){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
     // 2- Ecrire une fonction qui vérifie si une variable contient 
-    // la chaine de caractères \"hello world\". 
+    // la chaine de caractères "hello world". 
     // Si non, cette fonction doit return la même chaine mais avec un 
     // ", hello world" à la fin de la chaine en question
+    function hasHelloWorld($str){
+        // check strstr() ou strchr()
+
+    }
 
     // 3- Ecrire une fonction qui prend en compte deux arguments de 
     // type string, calcule la taille de chacun d'entre eux et 
