@@ -20,21 +20,64 @@
     // Si non, cette fonction doit return la même chaine mais avec un 
     // ", hello world" à la fin de la chaine en question
     function hasHelloWorld($str){
-        // check strstr() ou strchr()
-
+        if(strstr($str, "hello world")){
+            echo "Contient hello world";
+            return true;
+        }
+        else{
+            return $var.", hello world";
+        }
     }
 
     // 3- Ecrire une fonction qui prend en compte deux arguments de 
     // type string, calcule la taille de chacun d'entre eux et 
     // return la chaine de caractère la plus longue<br>"
+    function longestStr($str1, $str2){
+        $length1 = strlen($str1);
+        $length2 = strlen($str2);
+        if($length1 > $length2){
+            return $str1;
+        }
+        elseif($length1 < $length2){
+            return $str2;
+        }
+        else{
+            return $str1." // ".$str2;
+        }
+    }
 
     // 4- Ecrire une fonction qui prend un nombre en argument, 
     // rend true si le nombre est pair et false si le nombre est impair.
-
+    function isEven($nb){
+        if($nb%2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     // 5- Ecrire une fonction qui prend en compte deux arguments de 
     // type integer, et return le nombre le plus petit
+    function smallestBetween($nb1, $nb2){
+        if($nb1 > $nb2){
+            return $nb2;
+        }
+        elseif($nb1 < $nb2){
+            return $nb1;
+        }
+        else{
+            return $nb1." = ".$nb2;
+        }
+    }
 
     // 6- Ecrire une fonction qui affiche le contenu d'un tableau 
     // case par case. Ne pas oublier de revenir à la ligne à 
     // chaque nouvelle entrée.
+    function allItems($array){
+        $res = "";
+        foreach($array as $item){
+            $res .= $item."<br>";
+        }
+        return $res;
+    }
 ?>
